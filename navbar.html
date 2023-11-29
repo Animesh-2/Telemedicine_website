@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Telemedicine </title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #container{
+            display: flex;
+        }
+
+        #container ul{
+
+            display: flex;
+            justify-content: space-between;
+            padding: 3.5%;
+            box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+        }
+
+        ul {
+            text-align: center;
+            font-size: 22px;
+            gap: 25px;
+        }
+
+        ul>a:first-child li{
+            color: hsl(32,87%,63%);
+            padding-left: 50px;
+        }
+
+        ul>a:not(:first-child li){
+            color: #3f626f
+        }
+        ul>a:last-child li{
+            border: 1px solid red;
+            padding: 20px 40px;
+            color: white;
+            background-color:  #17535d;
+        }
+
+        li{
+            display: inline;
+        }
+        
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="container">
+
+        <ul>
+            <a href="">
+                <li> Medicines </li>
+            </a>
+            <a href="">
+                <li> Doctor </li>
+            </a>
+            <a href="">
+                <li> Pharmacy </li>
+            </a>
+            <a href="">
+                <li> Other Services </li>
+            </a>
+            <!-- <a href="">
+                <li> </li>
+            </a>
+            <a href="">
+                <li> Consult Now </li>
+            </a> -->
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
