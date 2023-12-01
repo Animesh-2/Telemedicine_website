@@ -2,13 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 #container {
     display: flex;
     width: 100%;
     box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
-
 }
 
 .navbar-left {
@@ -21,7 +21,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 2.5%;
+    padding: 2%;
 }
 
 .navbar-left,
@@ -31,8 +31,9 @@
     gap: 30px;
 }
 
-.navbar-left>a:first-child li {
-    color: hsl(32, 87%, 63%);
+.navbar-left>a:first-child img {
+    
+    width:30%;
 }
 
 .navbar-left>a:not(:first-child li) {
