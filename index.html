@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Telemedicine </title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/8f738ffcbd.js" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+
+    <div id="container">
+        <!-- Navbar is imported here -->
+    </div>
+    
+    <div class="home">
+        <div class="home-banner">
+            <div class="home-banner-wordings">
+                <h1>The place where<br> your health<br> matters most.</h1>
+                <p>Better health starts here.</p>
+                <button id="register">MORE ABOUT US</button>
+            </div>
+            <div class="home-banner-wordings">
+                <div class="right-content-image">
+                    <img src="home_image/[removal.ai]_fa1be547-40c2-4944-ad81-595b29dc75f9-thumb-new-816x460-a703eb5faf4742dfc8710fb05bacebb5.png">                    
+                </div>
+            </div>
+        </div>
+
+
+</body>
+
+</html>
+<script type="module" src="navbar.js"></script>
+<script type="module">
+    import { navbar } from './navbar.js';
+
+    // Now you can use the `navbar` function in this script
+    const navBarHTML = navbar();
+
+    // APPENDING TO CONTAINER ------->
+    let container = document.getElementById("container");
+    container.innerHTML = (navBarHTML);
+</script>
