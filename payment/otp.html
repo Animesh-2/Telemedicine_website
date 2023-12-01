@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Verification</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            background: rgb(255, 235, 238);
+            background-image: url(https://png.pngtree.com/back_origin_pic/04/57/88/bd90d67d6a09e0952d804fbff5511f9e.jpg);
+            background-size: cover;
+            opacity: 1;
+        }
+
+        
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            margin-top: 12%;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .classimg {
+            width: 7%;
+            height: 7%;
+        }
+
+        .merchant-name {
+            font-weight: bold;
+        }
+
+        .otp-input {
+            width: 50%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .submit-button {
+            display: block;
+            width: 50%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .resend-link {
+            color: #f44336;
+            text-decoration: none;
+            margin-top: 10px;
+        }
+
+        .input-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .otp-input {
+            flex-grow: 1;
+            margin-right: 10px;
+        }
+
+        .submit-button {
+            flex-shrink: 0;
+        }
+
+        .error-message {
+            display: none;
+            color: red;
+            animation: shake 0.5s ease-in-out 0s 3 alternate;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-10px);
+            }
+        }
+
+        body.shake {
+            animation: shake 0.1s ease-in-out 0s 3 alternate;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <p>Card Number: <span id="cardNumber">1234 5678 9012 3456</span></p>
+        <p class="merchant-name">Merchant Name: Online Medical Store</p>
+        <p>Amount: <span id="amount">$100.00</span></p>
+        <p>Date: <span id="date">2023-09-18</span></p>
+        <p style="color: green;"> <img class="classimg"
+                src="https://tse2.mm.bing.net/th?id=OIP.oFEWpe-Xf8ZEEbHeIiBrNQHaHa&pid=Api&P=0&h=180" alt="T"
+                style="vertical-align: middle; margin-left: 5px;">OTP has been sent</p>
+        <div class="input-container">
+            <input type="text" id="otpInput" class="otp-input" placeholder="Enter OTP">
+            <button style="background-color:#0a525f;" id="submitButton" class="submit-button">Submit</button>
+        </div>
+        <p>
+            I didn't receive a code |
+            <a href="#" id="resendLink" class="resend-link">Resend OTP</a>
+        </p>
+        <div class="error-message" id="errorMessage">Invalid OTP</div>
+    </div>
+
+    <script>
+        var arr = JSON.parse(localStorage.getItem("otp"))
+        document.querySelector("#cardNumber").innerHTML = arr.card
+        document.querySelector("#amount").innerHTML = arr.total
+        function updateDate() {
+            var currentDate = new Date();
+            var day = currentDate.getDate().toString().padStart(2, '0');
+            var month = (currentDate.getMonth() + 1).toString().padStart(2, '0'); // Month is 0-based
+            var year = currentDate.getFullYear();
+            var formattedDate = day + '/' + month + '/' + year;
+            document.getElementById("date").textContent = formattedDate;
+        }
+        updateDate();
+
+        document.getElementById("submitButton").addEventListener("click", function () {
+
+            var enteredOTP = document.getElementById("otpInput").value;
+
+            var expectedOTP = "123456";
+
+            if (enteredOTP === expectedOTP) {
+
+                window.location.href = "../payment/thankyou.html";
+            } else {
+                var errorMessage = document.getElementById("errorMessage");
+                errorMessage.style.display = "block";
+
+                setTimeout(function () {
+                    errorMessage.style.display = "none";
+                }, 3000);
+
+                document.body.classList.add("shake");
+
+                setTimeout(function () {
+                    document.body.classList.remove("shake");
+                }, 500);
+            }
+        });
+
+        document.getElementById("resendLink").addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("OTP has been resent.");
+        });
+    </script>
+</body>
+
+</html>
