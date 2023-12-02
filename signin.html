@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script> -->
+    <!-- <link
+      rel="shortcut icon"
+      href="Images/icon.png"
+      type="image/x-icon"
+      sizes="16x16"
+    /> -->
+    <!-- <link rel="stylesheet" href="Styles/navBar.css" /> -->
+    <link rel="stylesheet" href="Styles/signup.css" />
+    <link rel="stylesheet" href="Styles/signin.css" />
+    <title></title>
+  </head>
+
+  <body>
+    <div class="navbar"></div>
+
+    <div id="mainSignUpCont">
+      <div class="imageDiv">
+        <img
+          src="https://www.netmeds.com/images/cms/wysiwyg/cms/1588773798_sign-in-banner-new.png"
+        />
+      </div>
+      <div class="form_page">
+        <h1>Login to <span class="diff">TeleMedicine</span></h1>
+        <div class="erro_div">
+          <p>Incorrect username or password.</p>
+          <span
+            class="iconify hide_erro_msg"
+            data-icon="gridicons:cross-small"
+          ></span>
+        </div>
+        <form onsubmit="login(event)" class="form">
+          <label>Username</label>
+          <input type="text" id="login_username" placeholder="Enter Username" />
+          <label>
+            <span>Password</span>
+            <a href="">Forgot password?</a>
+          </label>
+          <input
+            type="password"
+            id="login_password"
+            placeholder="Enter Password"
+          />
+          <input type="submit" value="Sign in" id="submit" />
+        </form>
+
+        <div class="new_acc">
+          <p>New to TeleMedicine?<a href="signUp.html">Create An Account</a></p>
+        </div>
+
+        <ul class="git_policy">
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Security</a></li>
+          <li>Contact Us</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+<!-- <script type="module">
+  import navbar from "./components/navbar.js";
+
+  let DOM_nav = document.querySelector(".navbar");
+  DOM_nav.innerHTML = navbar();
+</script> -->
+<!-- <script src="Scripts/itemsInCart.js" type="module"></script> -->
+<script src="Scripts/signin.js"></script>
