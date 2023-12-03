@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password Reset</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/forgot.css">
+</head>
+<body>
+
+    
+    <div class="wrapper">
+        <form >
+            <h1>Reset your password</h1>
+            <div class="Input-box">
+                <input id="name" type="text" placeholder="Username"><i class='bx bx-user'></i>
+            </div>
+            <div class="Input-box">
+                <input id="email" type="email" placeholder="Email"><i class='bx bxs-envelope'></i>
+            </div>
+            <!-- <div class="Input-box">
+                <input id="password" type="password" placeholder="OTP"><i class='bx bxs-chat'></i>
+            </div> -->
+            
+            <button type="submit" class="btn" onclick="redirectToOtpPage(event)">Get OTP</button>
+            <div class="register-link">
+                <p>Back to <a href="/index.html">Login</a></p>
+            </div>
+        </form>
+    </div>
+    <div id="tostBox">
+        
+    </div>
+    <div class="popup">
+                
+        <h2><br>Thank You !</h2><br>
+        <p>Your details is sucessfully submitted. Thanks!&nbsp;&nbsp;&nbsp;&nbsp;<br> Your temporary password is 123</p>
+        <img src="https://thumbs.dreamstime.com/b/welcome-to-our-medical-center-smiling-female-doctor-opens-his-hands-flat-cartoon-style-design-vector-illustration-white-185665696.jpg" alt="">
+        <p>Back to login page</p>
+        <button type="button">Ok</button>
+       
+    </div>
+</body>
+</html>
+<script>
+
+ function redirectToOtpPage(event) {
+    event.preventDefault();
+        var email = document.querySelector("#email").value;
+
+        if(email==""){
+           // console.log("check")
+            var cre = "Please fill in all fields.";
+            showtost(cre)
+            return;
+        }
+        else{
+        var arr = JSON.parse(localStorage.getItem("sign_up_data")) || [];
+
+        // Check if the email already exists in the stored data
+        var emailIndex = arr.findIndex(function (item) {
+        return item.email === email;
+         });
+
+        if (emailIndex !== -1) {
+            // alert("Your temp password is  is 123.");
+
+            // Redirect to the OTP page
+            arr[emailIndex].pass = "123";
+            localStorage.setItem("sign_up_data", JSON.stringify(arr));
+            openpop();
+        } else {
+            //alert("User is not registered.");
+            var cre = "User is not registered.";
+            showtost(cre)
+            return;
+
+        }
+    }
+    }
+    var tostBox = document.getElementById("tostBox");
+function showtost(cre){
+  var tost = document.createElement("div");
+  tost.classList.add("tost");
+  tost.innerHTML = "<i class='bx bxs-x-circle'></i>" +cre;
+  tostBox.appendChild(tost);
+  setTimeout(()=>{
+    tost.remove();
+  },1500);
+
+}
+var popup = document.querySelector(".popup");
+function openpop(){ 
+  popup.classList.add("popup-open");
+}
+
+document.querySelector(".popup button").addEventListener("click", function(){
+  window.location.href="/index.html";
+})
+</script>
+</script>
