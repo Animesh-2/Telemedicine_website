@@ -54,7 +54,9 @@ div {
     text-decoration: none;
     color: #696B79;
 }
-
+.layout{
+    margin-top: 40px;
+}
 
 #paymentContent {
     width: 80%;
@@ -62,8 +64,7 @@ div {
     margin: auto;
     max-width: 987px;
     margin: auto;
-    /* color: white; */
-    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+   
 }
 
 #paymentContent-left {
@@ -409,7 +410,7 @@ svg:not(:root) {
 }
 
 
-
+/* 
 #footer {
     border-top: 1px solid #F5F5F6;
     margin: 0 0 10px 0;
@@ -435,7 +436,7 @@ svg:not(:root) {
     cursor: pointer;
     font-size: 14px;
     padding: 10px 0;
-}
+} */
 .priceBlockCommon-base-container{
     padding: 2rem;
 }
