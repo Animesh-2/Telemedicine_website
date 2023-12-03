@@ -41,27 +41,29 @@ div {
 /* middle  */
 .thankyou{
     background-color: white;
-    height: 50px;
+    height: 50%;
     width: 50%;
     padding: auto;
-    margin: 0px auto 0px auto;
+    /* margin: 0px auto 0px auto; */
+    margin: auto;
     text-align: center;
-    padding-top: 100px;
+    /* padding-top: 100px; */
 }
 #lower{
-    background-color: #ff3f6c;
-    margin: 80px 250px;
+    background-color: #0a525f;
+    margin: auto;
+    width: 35%;
     color: white;
 }
 #upper>h1{
     color: #03a685;
 }
 .thankyou a{
-    color:#ff3f6c;
+    color:#0a525f;
 }
 
 .thankyou{
-    min-height: 600px;
+    min-height: 500px;
 }
 .desktop-base-cardLayout {
     max-width: 980px;
