@@ -4,14 +4,13 @@ body {
 }
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    /* background-color: #f4f4f4; */
     text-align: center;
     background: rgb(255, 235, 238);
-    background-image: url(https://png.pngtree.com/back_origin_pic/04/57/88/bd90d67d6a09e0952d804fbff5511f9e.jpg);
+    /* background-image: url(https://png.pngtree.com/back_origin_pic/04/57/88/bd90d67d6a09e0952d804fbff5511f9e.jpg); */
     background-size: cover;
     opacity: 1;
 }
-
 
 div {
     display: block;
@@ -23,49 +22,39 @@ div {
     margin-bottom: 30px;
 }
 
-
-#paymentNavSecure {
-    display: flex;
-    align-items: center;
-}
-
-#paymentNavSecure img {
-    margin-right: 5px;
-}
-
-
 .cart-page {
     text-decoration: none;
     color: #696B79;
 }
 
-
-
-
 .address {
-    max-width: 1000px;
+    max-width: 50%;
+    height: 100%;
+    background-color: white;
+    padding: 20px;
     margin: 0 auto 24px;
     display: flex;
 }
 
 .address-left {
-    width: 67.5%;
+    width: 60%;
     vertical-align: top;
     padding-right: 35px;
-    padding-top: 12px;
+  
 }
 
 .address-Container {
-    width: 450px;
+    /* width: 450px; */
+    height: 100%;
     margin: auto;
     border: 1px solid #eaeaec;
-    margin-top: 20px;
+    /* margin-top: 20px; */
 
 }
 
 .address-base-container {
-
     height: 100%;
+    /* height: 600px; */
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -90,7 +79,7 @@ div {
 }
 
 form {
-    padding: 20px 35px 20px 20px;
+    padding: 0px 20px 0px 20px;
     justify-content: center;
 }
 
@@ -99,12 +88,12 @@ input[type="number"],
 button {
     width: 100%;
     margin: 10px auto;
-    padding: 12px;
+    padding: 8px;
     padding-right: 0;
     border: 1px solid #d4d5d9;
     color: #94969f;
     border-radius: 4px;
-    line-height: 14px;
+    line-height: 12px;
     font-weight: 300;
     font-size: 14px;
 }
@@ -120,14 +109,13 @@ label {
     padding: 16px 1px 0;
 }
 
-
 h5 {
     color: #03a685;
 }
 
-
 .address-right {
-    width: 32.5%;
+    width: 40%;
+    text-align: left;
     vertical-align: top;
     padding-top: 8px;
 }
@@ -140,13 +128,13 @@ h5 {
 
 .priceBlock-items {
     line-height: 15px;
-    color: #535766;
-    font-size: 12px;
+    color: #000000;
+    font-size: 14px;
     font-weight: 600;
 }
 
 .price-detailBody {
-    padding-top: 16px;
+    padding-top: 20px;
 }
 
 .priceBreakUp {
@@ -230,9 +218,4 @@ textarea {
 
 .convienceFee {
     margin-top: 10px;
-}
-
-.address{
-    background-color: white;
-   padding: 2rem;
 }
