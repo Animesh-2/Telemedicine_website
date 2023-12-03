@@ -19,6 +19,7 @@
 .navbar-right {
 
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-around;
     padding: 2%;
@@ -39,10 +40,14 @@
 .navbar-left>a:not(:first-child li) {
     color: #3f626f
 }
+.navbar-left>a:not(:first-child li):hover {
+    color: #e4934c;
+}
 
 .navbar-right {
     width: 40%;
     justify-content: flex-end;
+    flex-wrap: wrap;
 }
 
 .navbar-right>a:first-child li {
