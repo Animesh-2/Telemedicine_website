@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SHOPPING BAG</title>
     <link rel="stylesheet" href="cart.css">
-    <link rel="stylesheet" href="navbar/navbar.css">
+    
+    <link rel="stylesheet" href="navbar.css">
 
     <!-- <link rel="stylesheet" href="../Homepage/footer.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -20,7 +21,9 @@
 
 <body style="background-image: url(https://i.pinimg.com/originals/48/d5/48/48d548367e41ba2bb565191e32822bba.png);">
     
-  
+    <div id="container">
+        <!-- Navbar is imported here -->
+    </div>
 
     <div  id="parent">
         <div id="leftBlock">
@@ -149,4 +152,15 @@
 </body>
 <script src="cart.js"></script>
 
+<script type="module" src="navbar.js"></script>
+<script type="module">
+    import { navbar } from './navbar.js';
+
+    // Now you can use the `navbar` function in this script
+    const navBarHTML = navbar();
+
+    // APPENDING TO CONTAINER ------->
+    let container = document.getElementById("container");
+    container.innerHTML = (navBarHTML);
+</script>
 </html>
