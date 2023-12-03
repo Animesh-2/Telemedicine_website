@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        /* background: #f6f5f7; */
+        background: url('https://png.pngtree.com/back_origin_pic/04/57/88/bd90d67d6a09e0952d804fbff5511f9e.jpg') no-repeat center center fixed;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-family: "Montserrat", sans-serif;
+        height: 100vh;
+        margin: -20px 0 50px;
+      }
+
+      h1 {
+        font-weight: bold;
+        margin: 0;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      p {
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+        margin: 20px 0 30px;
+      }
+
+      span {
+        font-size: 12px;
+      }
+
+      a {
+        color: #333;
+        font-size: 14px;
+        text-decoration: none;
+        margin: 15px 0;
+      }
+      a:hover{
+        text-decoration: underline;
+      }
+
+      button {
+        border-radius: 20px;
+        border: 1px solid rgb(0, 139, 157);
+        background-color: rgb(0, 139, 157);
+        color: #ffffff;
+        font-size: 12px;
+        font-weight: bold;
+        padding: 12px 45px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        transition: transform 80ms ease-in;
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+
+      button:focus {
+        outline: none;
+      }
+
+      button.ghost {
+        background-color: transparent;
+        border-color: #ffffff;
+      }
+
+      form {
+        background-color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 50px;
+        height: 100%;
+        text-align: center;
+      }
+
+      input {
+        background-color: #eee;
+        border: 1px;
+        padding: 12px 15px;
+        margin: 8px 0;
+        width: 100%;
+        border-color: rgb(0, 181, 205);
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+          0 10px 10px rgba(0, 0, 0, 0.22);
+        position: relative;
+        overflow: hidden;
+        width: 768px;
+        max-width: 100%;
+        min-height: 480px;
+      }
+
+      .form-container {
+        position: absolute;
+        top: 0;
+        height: 100%;
+        transition: all 0.6s ease-in-out;
+      }
+
+      .sign-in-container {
+        left: 0;
+        width: 50%;
+        z-index: 2;
+      }
+
+      .container.right-panel-active .sign-in-container {
+        transform: translateX(100%);
+      }
+
+      .sign-up-container {
+        left: 0;
+        width: 50%;
+        opacity: 0;
+        z-index: 1;
+      }
+
+      .container.right-panel-active .sign-up-container {
+        transform: translateX(100%);
+        opacity: 1;
+        z-index: 5;
+        animation: show 0.6s;
+      }
+
+      @keyframes show {
+        0%,
+        49.99% {
+          opacity: 0;
+          z-index: 1;
+        }
+
+        50%,
+        100% {
+          opacity: 1;
+          z-index: 5;
+        }
+      }
+
+      .overlay-container {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100%;
+        overflow: hidden;
+        transition: transform 0.6s ease-in-out;
+        z-index: 100;
+      }
+
+      .container.right-panel-active .overlay-container {
+        transform: translateX(-100%);
+      }
+
+      .overlay {
+        background: rgb(0,82,93);
+        background: -webkit-linear-gradient(to right,rgb(0,82,93),rgb(0, 139, 157));
+        background: linear-gradient(to right, rgb(0,82,93),rgb(0, 139, 157));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        color: #ffffff;
+        position: relative;
+        left: -100%;
+        height: 100%;
+        width: 200%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+      }
+
+      .container.right-panel-active .overlay {
+        transform: translateX(50%);
+      }
+
+      .overlay-panel {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0 40px;
+        text-align: center;
+        top: 0;
+        height: 100%;
+        width: 50%;
+        transform: translateX(0);
+        transition: transform 0.6s ease-in-out;
+      }
+
+      .overlay-left {
+        transform: translateX(-20%);
+      }
+
+      .container.right-panel-active .overlay-left {
+        transform: translateX(0);
+      }
+
+      .overlay-right {
+        right: 0;
+        transform: translateX(0);
+      }
+
+      .container.right-panel-active .overlay-right {
+        transform: translateX(20%);
+      }
+
+      .social-container {
+        margin: 20px 0;
+      }
+
+      .social-container a {
+        
+        border-radius: 50%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 5px;
+        height: 40px;
+        width: 40px;
+      }
+      .social-container a:nth-child(1) {
+        border: 1px solid #0606b5;
+      }
+      .social-container a:nth-child(2) {
+        border: 1px solid #b50606;
+      }
+      .social-container a:nth-child(3) {
+        border: 1px solid #110334;
+      }
+      #tostBox{
+        z-index: 999;
+    position: absolute;
+    top: 15px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    display: flex;
+    align-items: center; 
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
+}
+.tost{
+   z-index: 1000; 
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.tost i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: red;
+    padding-right: 10px;
+    border-right: 1px solid rgb(205, 203, 203);
+}
+.tost::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color: red;
+    animation: anim 1.5s linear forwards;
+}
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+}
+
+.sucess{
+   z-index: 1000; 
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    margin: 15px 0;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.sucess i{
+    margin: 0 20px;
+    font-size: 35px;
+    color: rgb(19, 196, 3);
+    padding-right: 10px;
+    border-right: 1px solid rgb(205, 203, 203);
+}
+.sucess::after{
+    content:"";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background-color:  rgb(19, 196, 3);
+    animation: anim 1.5s linear forwards;
+}
+@keyframes anim {
+    100%{
+        width: 0;
+    }
+}
+
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/bece74334c.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div id="tostBox"></div>
+    <div class="container" id="container">
+      <div class="form-container sign-up-container">
+        <form id="signUp_action">
+          <h1>Create Account</h1>
+          <div class="social-container">
+            <a href="" class="social"><i class="fa-brands fa-twitter fa-xl" style="color: #1859c9;"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-google fa-xl" style="color: #e70d0d;"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+          </div>
+          <span>or use your email for registration</span>
+          <input id="up_name" type="text" placeholder="Name" />
+          <input id="up_email" type="email" placeholder="Email" />
+          <input id="up_pass" type="password" placeholder="Password" />
+          <button>Sign Up</button>
+        </form>
+      </div>
+      <div class="form-container sign-in-container">
+        <form id="signIn_action">
+          <h1>Sign in</h1>
+          <div class="social-container">
+            <a href="" class="social"><i class="fa-brands fa-twitter fa-xl" style="color: #1859c9;"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-google fa-xl" style="color: #e70d0d;"></i></a>
+            <a href="#" class="social"><i class="fa-brands fa-linkedin-in fa-xl"></i></a>
+          </div>
+          <span>or use your account</span>
+          <input id="in_email" type="email" placeholder="Email" />
+          <input id="in_pass" type="password" placeholder="Password" />
+          <a href="/forgot.html">Forgot your password?</a>
+          <button>Log In</button>
+        </form>
+      </div>
+      <div class="overlay-container">
+        <div class="overlay">
+          <div class="overlay-panel overlay-left">
+            <h1>Welcome Back!</h1>
+            <p>
+              To keep connected with us please login with your personal info
+            </p>
+            <button class="ghost" id="signIn">Log In</button>
+          </div>
+          <div class="overlay-panel overlay-right">
+            <h1>Hello, Friend!</h1>
+            <p>Enter your personal details and start journey with us</p>
+            <button class="ghost" id="signUp">Sign Up</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script>
+  const signUpButton = document.getElementById("signUp");
+  const signInButton = document.getElementById("signIn");
+  const container = document.getElementById("container");
+
+  signUpButton.addEventListener("click", () => {
+    container.classList.add("right-panel-active");
+  });
+
+  signInButton.addEventListener("click", () => {
+    container.classList.remove("right-panel-active");
+  });
+
+  let sign_up_arr = JSON.parse(localStorage.getItem("sign_up_data")) || [];
+
+  document
+    .getElementById("signUp_action")
+    .addEventListener("submit", signUpFun);
+
+  function signUpFun() {
+    event.preventDefault();
+    let sign_up_obj = {
+      name: document.getElementById("up_name").value,
+      email: document.getElementById("up_email").value,
+      pass: document.getElementById("up_pass").value,
+    };
+    if (!document.getElementById("up_name").value || !document.getElementById("up_email").value || !document.getElementById("up_pass").value) {
+    //alert("Please fill in all fields.");
+    var cre = "Please fill in all fields.";
+    showtost(cre)
+    return
+}
+    var emailExists = sign_up_arr.some(function (item) {
+        return item.email === document.getElementById("up_email").value;
+    });
+    if (emailExists) {
+   
+   var cre = "Email already exists in registered. Please use a different email.";
+   showtost(cre)
+   return;
+}
+
+    sign_up_arr.push(sign_up_obj);
+    localStorage.setItem("sign_up_data", JSON.stringify(sign_up_arr));
+    console.log("sign_up_arr", sign_up_arr);
+    goleft();
+    var cre = `${document.getElementById("up_name").value} Your Sign Up is Succesful`;
+   showtost(cre)
+   return;
+
+    // alert(
+      
+    // );
+  }
+
+  // login Script
+  let r = 0;
+  let sign_in_arr = JSON.parse(localStorage.getItem("sign_up_data"));
+  document
+    .getElementById("signIn_action")
+    .addEventListener("submit", signInFun);
+  function signInFun() {
+    event.preventDefault();
+
+    let email_in = document.getElementById("in_email").value;
+    let pass_in = document.getElementById("in_pass").value;
+    if (!email_in || !pass_in ) {
+    //alert("Please fill in all fields.");
+    var cre = "Please fill in all fields.";
+    showtost(cre)
+    return
+}
+    for (let i = 0; i < sign_in_arr.length; i++) {
+      if (sign_in_arr[i].email == email_in && sign_in_arr[i].pass == pass_in) {
+        // alert(`${sign_in_arr[i].name} your login is Succesful`);
+        var cre = `${sign_in_arr[i].name} your login is Succesful`;
+        showtost(cre)
+        // return
+        r++;
+        window.location.href = "homepage.html";
+        return;
+      }else{
+        var tre = "Wrong credentials";
+    showtost(tre)
+      }
+    }
+    
+    return
+  }
+  var tostBox = document.getElementById("tostBox");
+function showtost(cre){
+  var tost = document.createElement("div");
+  tost.classList.add("tost");
+  tost.innerHTML = "<i class='bx bxs-x-circle'></i>" +cre;
+  if(cre.includes('Succesful')){
+    tost.classList.add("sucess");
+    tost.innerHTML = "<i class='bx bx-check-circle'></i>" +cre;
+  }
+  tostBox.appendChild(tost);
+  setTimeout(()=>{
+    tost.remove();
+  },1500);
+
+}
+function goleft(){
+  container.classList.remove("right-panel-active");
+}
+</script>
