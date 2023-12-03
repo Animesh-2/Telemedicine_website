@@ -1,6 +1,6 @@
 
-let url = `https://apilink-ldn3.onrender.com`;
-let urlProduct = `https://apilink-ldn3.onrender.com/Products`;
+let url = `https://backend-v7c7.onrender.com/`;
+let urlProduct = `https://backend-v7c7.onrender.com/products`;
 
 
 let mainSection = document.getElementById("right");
