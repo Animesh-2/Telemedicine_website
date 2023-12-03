@@ -2,6 +2,7 @@ body {
     font-family: Whitney, Helvetica, Arial, sans-serif !important;
     color: #424553;
     /* background-image: url(https://png.pngtree.com/back_origin_pic/04/57/88/bd90d67d6a09e0952d804fbff5511f9e.jpg); */
+    background-image: url(https://i.pinimg.com/originals/48/d5/48/48d548367e41ba2bb565191e32822bba.png);
     background-size: cover;
 }
 
@@ -55,19 +56,15 @@ div {
 }
 
 
-
-
-
-
 #paymentContent {
     width: 80%;
     display: flex;
     margin: auto;
     max-width: 987px;
-    margin: 0 auto;
+    margin: auto;
+    /* color: white; */
+    /* box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
 }
-
-
 
 #paymentContent-left {
     width: 67.5%;

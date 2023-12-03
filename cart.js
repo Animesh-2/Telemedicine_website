@@ -14,7 +14,6 @@ function displayData(data) {
     totalmrp = 0;
     totaldisc = 0;
 
-
     document.querySelector("#cartitemparent").innerHTML = "";
     data.map(function (elem, index) {
 
