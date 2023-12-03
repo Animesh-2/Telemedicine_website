@@ -28,47 +28,60 @@ tablet.addEventListener("click",()=>{
 })
 
 cream.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`product_form=cream`)
+    fetchData(`${urlProduct}`,`product_form=cream`)
 })
 
 syrup.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`product_form=strips`)
+    fetchData(`${urlProduct}`,`product_form=strips`)
 })
 
 acidity.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`problem=Acidity`)
+    fetchData(`${urlProduct}?`,`problem=Acidity`)
 })
 
 immunity.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`problem=Immunity`)
+    fetchData(`${urlProduct}?`,`problem=Immunity`)
 })
 
 diabetes.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`problem=Diabetes`)
+    fetchData(`${urlProduct}?`,`problem=Diabetes`)
 })
 
 soap.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`product_form=soap`)
+    fetchData(`${urlProduct}?`,`product_form=soap`)
 })
 
 
 sortAtoZBtn.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`_sort=price&_order=asc`);
+  fetchData(`${urlProduct}`,`_sort=priceCTC&_order=asc`);
   })
   sortZtoABtn.addEventListener("click",()=>{
-    fetchData(`${urlProduct}?_page=1&_limit=6`,`_sort=price&_order=desc`);
+    fetchData(`${urlProduct}`,`_sort=priceCTC&_order=desc`);
   })
 
-async function fetchData(url,quaryParams =""){
+async function fetchData(url,queryParamString=""){
     try{
-     console.log(url+"&"+quaryParams);
+    //  console.log(url+"&"+quaryParams);
+    
+     let res = await fetch (`${url}?_page=1&_limit=6&${queryParamString}`)
+    //  let res = await fetch(url+"&"+quaryParams)
+    let total =(res.headers.get("X-Total-Count"))
+  console.log(total)
+  let limit =6;
+  let totalpage=Math.ceil(total/limit);
+  console.log(totalpage)
+  let data = await res.json();
+  displayData(data);
+  console.log(data)
+    //   pagination(res.headers.get("X-Total-count"),5,quaryParams);
+    //  console.log("Total items:-" + res.headers.get("X-Total-count"));
+    //  let data = await res.json();
+    //  console.log(data);
+    //  displayData(data);
+
+    paginationWrapper.innerText="";
   
-     let res = await fetch(url+"&"+quaryParams)
-      pagination(res.headers.get("X-Total-count"),5,quaryParams);
-     console.log("Total items:-" + res.headers.get("X-Total-count"));
-     let data = await res.json();
-     console.log(data);
-     displayData(data);
+    pagination(totalpage,queryParamString)
     }
   
    catch(err){
@@ -77,25 +90,39 @@ async function fetchData(url,quaryParams =""){
    }
   
   
-  fetchData(`${urlProduct}?_page=1&_limit=6`);
+  fetchData(`${urlProduct}`);
   
-  function pagination(total,limit,quaryParams){
-     let totalpage = Math.ceil(total/limit);
-      paginationWrapper.innerHTML="";
+  // function pagination(total,limit,quaryParams){
+  //    let totalpage = Math.ceil(total/limit);
+  //     paginationWrapper.innerHTML="";
   
-     for(let i=1;i<=totalpage;i++){
-       let btn = document.createElement("button");
-       btn.className = "pagination-button";
-    //    btn.dataset.id = i;
-       btn.innerHTML = i;
-       btn.addEventListener("click",()=>{
-         fetchData(`${urlProduct}?_page=${i}&_limit=6`,quaryParams)
-            paginationWrapper.append(btn);
-       })
-       paginationWrapper.append(btn);
-     }
+  //    for(let i=1;i<=totalpage;i++){
+  //      let btn = document.createElement("button");
+  //      btn.className = "pagination-button";
+  //   //    btn.dataset.id = i;
+  //      btn.innerHTML = i;
+  //      btn.addEventListener("click",()=>{
+  //        fetchData(`${urlProduct}?_page=${i}&_limit=6`,quaryParams)
+  //           paginationWrapper.append(btn);
+  //      })
+  //      paginationWrapper.append(btn);
+  //    }
   
-   }
+  //  }
+  function pagination(totalpage,queryParamString){
+    for(let i =1;i<=totalpage;i++){
+      let btn =document.createElement("button");
+      btn.innerText=i;
+      btn.className = "pagination-button";
+
+      btn.addEventListener("click",()=>{
+        fetchData(`${urlProduct}?_page=${i}&_limit=6`,queryParamString)
+      })
+      paginationWrapper.append(btn)
+      }
+  
+  }
+
   
    function displayData(data){
    mainSection.innerHTML="";
