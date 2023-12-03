@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Address</title>
+    <link rel="stylesheet" href="address.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../Homepage/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+
+</head>
+
+<body>
+ 
+    <div class="layout">
+
+        <div id="mountRoot">
+            <div id="appContent">
+                <div class="page   ">
+                    <div>
+                        <div>
+                            <div class="address">
+                                <div class="address-left">
+                                    <div class="address-Container">
+                                        <div class="address-base-container">
+                                            <form action="">
+                                                <label for="">CONTACT DETAILS</label><br>
+
+                                                <input type="text" placeholder="Name*" id="name"><br>
+                                                <input type="number" placeholder="Mobile No.*" id="number"><br>
+
+                                                <label for=""> ADDRESS </label><br>
+
+                                                <input type="number" name="pin" placeholder="Pin Code*" id="pin"><br>
+                                                <input type="text"
+                                                    placeholder="Address (House No, Building, Street, Area)*"
+                                                    id="address"><br>
+                                                <input type="text" placeholder="City / District*" id="city">
+                                                <input type="text" placeholder="State*" id="state"><br>
+
+                                                <label for="">SAVE ADDRESS AS</label><br>
+                                                <input type="checkbox" name="" id=""><span>Make this my default
+                                                    address</span><br>
+                                                <h5></h5>
+                                                <button style="background-color:#0a525f" type="submit"
+                                                    class="button-base-button">ADD ADDRESS</button>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="address-right">
+                                    <div class="price-container ">
+                                        <div id="priceBlockHeader" class="priceBlock-items">PRICE DETAILS
+                                            (<span id="priceDetails">0</span> Items)</div>
+                                        <div class="price-detailBody">
+                                            <div class="priceBreakUp" id="priceBlock">
+                                                <div class="priceDetail-base-row">
+                                                    <span>Total MRP</span>
+                                                    <span class="priceDetail-base-value ">
+                                                        <span>₹</span>
+
+                                                        <span id="totalmrp">0</span>
+                                                    </span>
+                                                </div>
+                                                <div class="priceDetail-base-row">
+                                                    <span>Discount on MRP</span>
+                                                    <span class="priceDetail-base-value priceDetail-base-discount">
+                                                        <span>- ₹</span>
+
+                                                        <span id="totaldisc">0</span>
+                                                    </span>
+                                                </div>
+                                                <div class="priceDetail-base-row">
+                                                    <span>Convenience Fee
+                                                        <div class="priceDetail-Container">
+                                                            <button font-size="body2" font-weight="bold" role="button"
+                                                                class="css-one">
+                                                                <div style="color: #03a685;" class="css-two">Know More
+                                                                </div>
+                                                            </button>
+                                                        </div>
+                                                    </span>
+                                                    <span class="priceDetail-base-value convienceFee">
+
+                                                        <span id="convenienceFee">₹ 99</span>
+                                                        <span style="color: #03a685;">FREE</span>
+                                                    </span>
+                                                </div>
+                                                <div class="priceDetail-base-total">
+                                                    <span>Total Amount</span>
+                                                    <span class="priceDetail-base-value ">
+                                                        <span>₹</span>
+
+                                                        <span id="totalamt">0</span>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+</body>
+
+</html>
+<script>
+    var total = JSON.parse(localStorage.getItem("addressTotalObj"));
+    document.getElementById("totalmrp").innerText = total.totalamt;
+    document.getElementById("totaldisc").innerText = 0;
+    document.getElementById("totalamt").innerText = total.totalamt;
+    document.getElementById("priceDetails").innerText = total.totalItem;
+
+    document.querySelector("form").addEventListener("submit", function () {
+        event.preventDefault();
+        var target = event.target
+        var name = target.querySelector("#name").value
+        var mobile = target.querySelector("#number").value
+        var pin = target.querySelector("#pin").value
+        var address = target.querySelector("#address").value
+        var city = target.querySelector("#city").value
+        var state = target.querySelector("#state").value
+        if (name == "" || mobile == "" || pin == "" || address == "" || city == "" || state == "") {
+            var h5 = document.querySelector("h5")
+            h5.innerText = "* mark field is mandatory!";
+        }
+        else {
+            location = "../payment/payment.html";
+        }
+    })
+</script>

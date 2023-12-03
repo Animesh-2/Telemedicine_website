@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="../navbar/navbar.css">
+    <link rel="stylesheet" href="../Homepage/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+    <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+
+</head>
+
+<body  >
+    <!-- <header>
+        <div class="nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>
+            <div class="menu-items">
+              <li><a href="../Product_page/product.html">Medicines</a></li>
+              <li><a href="#">Doctor</a></li>
+              <li><a href="#">Pharmacy</a></li>
+              <li><a href="#">Other Services</a></li>
+              <li><a href="#">Login</a></li>
+            </div>
+        </div>
+
+        <div id="navbar">
+            <a href="../index.html"><img id="homepage-logo" src="../navbar/images/[removal.ai]_73a82357-798b-4ce6-a251-ce2e13f3a654-png-clipart-logo-physician-medical-prescription-clinic-hospital-others-miscellaneous-text.png" alt="image"></a>
+            <a class="navbar-anchors" href="../Product_page/product.html">Medicines</a>
+            <a class="navbar-anchors" href="#">Doctor</a>
+            <a class="navbar-anchors" href="#">Pharmacy</a>
+            <a class="navbar-anchors" href="#">Other services</a>
+        </div>
+
+        <div id="homepage-icons">
+            <h4 id="username"></h4>
+            <div id="homepage-cart">
+                <a href="../cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+            <button id="nav_btn">Consult Now</button>
+        </div>
+
+    </header> -->
+    <div class="layout">
+        
+        <div id="paymentBody">
+            <div>
+                <div id="paymentContent">
+                    <div id="paymentContent-left">
+                        <!-- <div class="bank-offer-div">
+                            <div class="offers-base-container">
+                                <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR0DSNOz-ECEaUf3OUgCFD0kl7g10M3Cm9g_Fu9s7C2ciOQtVCV"
+                            alt="">
+                                <div class="offers-base-title">Bank Offers</div>
+                                <div>
+                                    <li class="offers-base-message "> <span>10% Instant Discount on IDFC FIRST Bank
+                                            Cards on a min spend of Rs 2,500.TCA</span></li>
+                                    <div style="color: #03a685;"  class="offers-base-more">Show More
+                                    </div>
+                                    <select id="dropdown"></select>
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="pay-mode">
+                            <div style="background-color: white;" class="pay-mode-headline"> Choose Payment Mode </div>
+                            <div class="pay-mode-option">
+                                <div class="tabBar-base-tabsBlock">
+                                    <div id="card" class="tabBar-base-selected tabBar-base-tab ">
+                                        <span class="tabBar-base-tabLabel"><span
+                                                class="paymentOptions">
+                                                <div class="paymentOptions-icon">
+                                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS_ssIw_RVYuNkwuW0zSwNjtyYX4c45KuqgZPH9KuL6_kX50XZ" alt="">
+                                                </div>
+                                                <div>
+                                                    <span style="color: #03a685;"   class="paymentOptions-base-tabDisplayText">Credit/Debit
+                                                        Card</span>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="cod" class=" tabBar-base-tab ">
+                                        <span class="tabBar-base-tabLabel">
+                                            <span class="paymentOptions">
+                                                <div class="paymentOptions-icon">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14"
+                                                        viewBox="0 0 24 16" prefix="">
+                                                        <g fill="none" fill-rule="evenodd"
+                                                            transform="rotate(-6 29.622 -5.581)">
+                                                            <path stroke="#000"
+                                                                d="M19.938 1.386l1.03.072a1 1 0 0 1 .928 1.067l-.697 9.976a1 1 0 0 1-1.068.927L1.988 11.946">
+                                                            </path>
+                                                            <rect width="20" height="12" stroke="#000" rx="1"></rect>
+                                                            <path fill="#000" fill-rule="nonzero"
+                                                                d="M10.622 10l.744-.36-2.27-2.38c.216-.039.427-.101.633-.188.206-.086.394-.199.563-.336.17-.138.317-.3.441-.488.125-.188.214-.4.267-.637h1v-.798h-.992a1.612 1.612 0 0 0-.067-.234 2.82 2.82 0 0 0-.24-.5 1.462 1.462 0 0 0-.146-.204H12V3H8.122v.875h.559c.218 0 .414.025.588.075.174.05.325.117.454.204a1.276 1.276 0 0 1 .508.659h-2.11v.798h2.09c-.07.173-.179.32-.324.442a1.96 1.96 0 0 1-.488.298 3.005 3.005 0 0 1-1.063.23L8 7.198 10.622 10z">
+                                                            </path>
+                                                            <path stroke="#000"
+                                                                d="M3 0c-.167.833-.5 1.5-1 2s-1.167.833-2 1M3 12c-.167-.833-.5-1.5-1-2S.833 9.167 0 9M17 0c.167.833.5 1.5 1 2s1.167.833 2 1M17 12c.167-.833.5-1.5 1-2s1.167-.833 2-1">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <span class="paymentOptions-base-tabDisplayText">Cash On Delivery
+                                                        (Cash/Card/UPI)</span>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="upi" class=" tabBar-base-tab ">
+                                        <span class="tabBar-base-tabLabel">
+                                            <span class="paymentOptions">
+                                                <div class="paymentOptions-icon"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="18" height="12"
+                                                        viewBox="0 0 20 14" prefix="">
+                                                        <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+                                                            <rect width="18" height="12" stroke="#000" rx="1"></rect>
+                                                            <path fill="#000" fill-rule="nonzero"
+                                                                d="M5.236 9.088c1.336 0 2.328-.744 2.328-2.28V3.48H6.188v3.344c0 .704-.312 1.112-.936 1.112-.616 0-.936-.416-.936-1.128V3.48H2.94v3.336c0 1.544.944 2.272 2.296 2.272zM9.876 9V7.168h.352c1.336 0 2.224-.64 2.224-1.888 0-1.2-.824-1.8-2.168-1.8H8.508V9h1.368zm.304-2.864h-.32V4.512h.344c.608 0 .92.264.92.792 0 .568-.336.832-.944.832zM14.524 9V3.48h-1.368V9h1.368z">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <span class="paymentOptions-base-tabDisplayText">PhonePe/Google
+                                                        Pay/BHIM UPI</span>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="wallet" class=" tabBar-base-tab ">
+                                        <span class="tabBar-base-tabLabel">
+                                            <span class="paymentOptions">
+                                                <div class="paymentOptions-icon"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="18" height="16"
+                                                        viewBox="0 0 20 17" prefix="">
+                                                        <g fill="#000" fill-rule="nonzero">
+                                                            <path stroke="#000" stroke-width=".3"
+                                                                d="M17.594 6.297V3.484a1.76 1.76 0 0 0-1.758-1.757h-4.369l.008-.315a1 1 0 0 0-.987-1.025L5.218.32H4.165C3.582.32 3.11.793 3.11 1.375v.352h-.351A1.76 1.76 0 0 0 1 3.484v10.758C1 15.212 1.789 16 2.758 16h10.758a1.76 1.76 0 0 0 1.722-1.406h.598a1.76 1.76 0 0 0 1.758-1.758v-.914h.351c.582 0 1.055-.473 1.055-1.055V7.703c0-.775-.63-1.406-1.406-1.406zm.703 1.406a.703.703 0 0 1-.703.703V7c.387 0 .703.315.703.703zM15.836 2.43c.582 0 1.055.473 1.055 1.054v4.922h-1.618v-2.11a1.76 1.76 0 0 0-1.406-1.722L11.5 4.6l-.033-2.17h4.369zM9.437 4.54V1.022h1.055c.194 0 .352.158.352.352v3.164H9.438zm-2.109 0V1.022h1.406V4.54H7.328zM3.812 1.374c0-.194.158-.352.352-.352h2.461V4.54H3.812V1.375zM2.758 2.43h.351v2.11h-.276c-.581 0-1.13-.422-1.13-1.056 0-.581.473-1.054 1.055-1.054zm10.758 12.867H2.758a1.056 1.056 0 0 1-1.055-1.055V4.87c.314.234.71.373 1.13.373h10.683c.581 0 1.054.473 1.054 1.055v2.11h-2.46c-.582 0-1.055.472-1.055 1.054v1.406c0 .582.473 1.055 1.054 1.055h2.461v2.32c0 .582-.473 1.055-1.054 1.055zm3.375-2.461c0 .582-.473 1.055-1.055 1.055h-.563v-1.97h1.618v.915zm1.054-1.617H12.11a.352.352 0 0 1-.351-.352V9.461c0-.194.157-.352.351-.352h5.485c.25 0 .491-.065.703-.188v1.946a.352.352 0 0 1-.352.352z">
+                                                            </path>
+                                                            <path
+                                                                d="M12.813 9.813a.352.352 0 1 0 0 .703.352.352 0 0 0 0-.704zM5.219 3.836a.352.352 0 0 0 .351-.352V2.078a.352.352 0 1 0-.703 0v1.406c0 .195.158.352.352.352zM15.836 9.813h-1.617a.352.352 0 1 0 0 .703h1.617a.352.352 0 1 0 0-.704z">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <span
+                                                        class="paymentOptions-base-tabDisplayText">Paytm/Wallets</span>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="netbanking" class=" tabBar-base-tab ">
+                                        <span class="tabBar-base-tabLabel">
+                                            <span class="paymentOptions">
+                                                <div class="paymentOptions-icon"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="18" height="16"
+                                                        viewBox="0 0 18 16" prefix="">
+                                                        <g fill="none" fill-rule="evenodd">
+                                                            <path stroke="#000" stroke-width="1.125"
+                                                                d="M1.498 6.625h15.048a.112.112 0 0 0 .069-.201L9.605 1 1.437 6.419a.112.112 0 0 0 .062.206z">
+                                                            </path>
+                                                            <path fill="#000"
+                                                                d="M3.375 7.188H4.5v6.187H3.375V7.75zM6.75 7.188h1.125v6.187H6.75zM10.125 7.188h1.125v6.187h-1.125zM13.5 7.188h1.125v6.187H13.5zM1.727 13.375h14.546c.376 0 .727.188.936.501l.558.837a.225.225 0 0 1-.187.35H.42a.225.225 0 0 1-.187-.35l.558-.837c.209-.313.56-.501.936-.501z">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <span class="paymentOptions-base-tabDisplayText">Net Banking</span>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <div id="emi" class=" tabBar-base-tab ">
+                                        <span class="tabBar-base-tabLabel">
+                                            <span class="paymentOptions">
+                                                <div class="paymentOptions-icon"><svg
+                                                        xmlns="http://www.w3.org/2000/svg" width="18" height="16"
+                                                        viewBox="0 0 18 18" prefix="">
+                                                        <g fill="none" fill-rule="evenodd" transform="translate(0 1)">
+                                                            <path stroke="#000" stroke-width="1.125"
+                                                                d="M13.52 4.5h2.23c.621 0 1.125.504 1.125 1.125v6.75c0 .621-.504 1.125-1.125 1.125H2.25a1.125 1.125 0 0 1-1.125-1.125v-6.75c0-.621.504-1.125 1.125-1.125h2.256">
+                                                            </path>
+                                                            <path fill="#000"
+                                                                d="M.844 14.625H6.75c0 .31.252.563.563.563h3.375c.31 0 .562-.252.562-.563h5.906a.844.844 0 1 1 0 1.688H.844a.844.844 0 1 1 0-1.688z">
+                                                            </path>
+                                                            <circle cx="9" cy="4.5" r="4.5" stroke="#000"
+                                                                stroke-width="1.125"></circle>
+                                                            <path fill="#000" fill-rule="nonzero"
+                                                                d="M9.466 7.4l.558-.258-1.702-1.7c.162-.027.32-.072.475-.133.154-.062.295-.142.422-.24.127-.1.237-.215.33-.35.094-.133.161-.285.201-.454h.75v-.57h-.744a1.11 1.11 0 0 0-.05-.167 1.963 1.963 0 0 0-.18-.357 1.048 1.048 0 0 0-.11-.146H10.5V2.4H7.591v.625h.42c.163 0 .31.018.44.053.13.036.244.084.341.146a.94.94 0 0 1 .381.47H7.591v.57h1.567a.799.799 0 0 1-.243.317c-.11.087-.231.158-.366.213a2.362 2.362 0 0 1-.797.165l-.252.439L9.466 7.4z">
+                                                            </path>
+                                                        </g>
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <span class="paymentOptions-base-tabDisplayText">EMI/Pay
+                                                        Later</span>
+                                                </div>
+                                            </span>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="pay-mode-option-right">
+                                    <div>
+                                        <form action="">
+                                            <div>
+                                                <div class="card-base-heading"> CREDIT/ DEBIT CARD </div>
+                                                <div>
+                                                    <input class="text" type="text" placeholder="Card Number"
+                                                        minlength="16" maxlength="16" required><br>
+                                                    <input class="text text1" type="text" placeholder="Name on card"
+                                                        required><br>
+                                                    <input class="exp-date" type="month"
+                                                        placeholder="Valid Thru (MM/YY)" min="2023-10" max="2036-10"
+                                                        placeholder="Valid Thru (MM/YY)" required>
+                                                    <input class="cvv" type="text" placeholder="CVV" minlength="3"
+                                                        maxlength="3" required>
+                                                </div>
+                                            </div>
+                                            <a href="../payment/OTP.html"><button style="background-color:#0a525f;"  class="placeOrder">PLACE ORDER</button></a>
+                                            
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="gift-div">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="19" viewBox="0 0 20 19"
+                                    class="giftcard-base-giftIcon">
+                                    <path fill-rule="evenodd" stroke="#000" stroke-width=".2"
+                                        d="M18.1 7.26h-5.85V4.577h5.85v2.685zm-5.85 9.845h4.95v-8.95h-4.95v8.95zm-9.45 0h4.95v-8.95H2.8v8.95zM1.9 4.576h5.85v2.685H1.9V4.576zm4.295-2.073c-.01-.098 0-.264.193-.464.12-.089.25-.11.402-.11.653 0 1.565 1.081 2.25 1.752H6.886c-.263-.224-.656-.835-.691-1.178zm5.155 14.602h-2.7V4.576h2.7v12.53zm1.879-15.183c.152 0 .28.028.401.117.194.2.204.371.194.47-.036.358-.45.948-.693 1.172h-2.152c.685-.671 1.596-1.759 2.25-1.759zm5.323 1.76h-4.279c.218-.225.408-.71.446-1.087.031-.303-.026-.77-.475-1.213-.012-.012-.025-.03-.038-.04a1.552 1.552 0 0 0-.977-.34c-1.248 0-2.587 1.527-3.22 2.342C9.376 2.529 8.037 1 6.79 1a1.549 1.549 0 0 0-1.015.37c-.449.442-.506.922-.475 1.225.039.376.228.862.446 1.086H1.448c-.247 0-.448.15-.448.4v3.61c0 .25.2.465.448.465H1.9v9.37c0 .246.19.474.42.474h15.363c.23 0 .417-.228.417-.474v-9.37h.452A.46.46 0 0 0 19 7.692V4.08c0-.25-.2-.4-.448-.4z">
+                                    </path>
+                                </svg>
+                                <span class="giftcard-base-title">Have a Gift Card?</span>
+                                <span style="color: #0a525f;" class="giftcard-base-apply">APPLY GIFT CARD</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="paymentDesktop-base-right">
+                        <div class="priceBlockCommon-base-container ">
+                            <div id="priceBlockHeader" class="priceBlockCommon-base-items">PRICE DETAILS (<span id="priceDetails">0</span> Items)</div>
+                            <div class="priceBlockCommon-base-detailBody">
+                                <div class="priceBreakUp-base-orderSummary" id="priceBlock">
+                                    <div class="priceDetail-base-row">
+                                        <span>Total MRP</span>
+                                        <span class="priceDetail-base-value ">
+                                            <span>₹</span>
+                                            <span id="totalmrp">0</span>
+                                        </span>
+                                    </div>
+                                    <div class="priceDetail-base-row">
+                                        <span>Discount on MRP</span>
+                                        <span class="priceDetail-base-value priceDetail-base-discount">
+                                            <span>-₹</span>
+                                            <span id="totaldisc">0</span>
+                                        </span>
+                                    </div>
+                                    <div class="priceDetail-base-row">
+                                        <span>Convenience Fee <div class="priceDetail-Container">
+                                                <button font-size="body2" font-weight="bold" role="button"
+                                                    class="css-1">
+                                                    <div style="color: #03a685;"  class="css-2">
+                                                        Know More
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </span>
+                                        <span class="priceDetail-base-value">
+                                            <span id="convenienceFee">₹ 99</span> <span style="color: #03a685;">FREE</span>
+                                        </span>
+                                    </div>
+                                    <div class="priceDetail-base-total">
+                                        <span>Total Amount</span>
+                                        <span class="priceDetail-base-value ">
+                                            <span>₹</span>
+                                            <span id="totalamt">0</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    </body>
+
+</html>
+<script src="payment.js"></script>
