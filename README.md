@@ -28,6 +28,13 @@ The Project is deployed on netlifty
 
 # Snapshots of Pages
 
+Home Page
+
+![image](https://github.com/Animesh-2/Telemedicine-website/assets/51116785/ab4858d3-2241-4017-89d3-9b9dd81a4ee1)
+
+Navigation Bar
+
+
 
 # Team Members-
 Animesh Singh
