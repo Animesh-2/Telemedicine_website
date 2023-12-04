@@ -31,6 +31,7 @@ API
 
 The Project is deployed on netlifty 
 - Deployed Link:- [Enjoy the Experience](https://fastidious-sunflower-8937c8.netlify.app/)
+- video Link:- [know the site](https://youtu.be/TSSLJ6n0zJk)
 
 ## Snap Shots 📷
 
