@@ -17,7 +17,7 @@ JSON-SERVER
 API
 
 **Splide library's CSS file (splide-default.min.css) has been used**
-##**Font Awesome Icons have been used for icons**
+& **Font Awesome Icons have been used for icons**
 
 
 ## Features ✨
