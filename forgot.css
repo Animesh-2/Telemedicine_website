@@ -29,7 +29,9 @@ body{
     height: auto;
 }
 
-
+/* .wrapper {
+    width: 100%; /* Make the wrapper div the same width as the image */
+/* } */ */
 
 .wrapper {
     width: 100%; /* Make the wrapper div the same width as the image */
