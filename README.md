@@ -1,6 +1,9 @@
 # Telemedicine-website
 
-1. Animesh Singh --------> Home Page
-2. Abhay Khare------> Product Page
-3. Ajay Jaiswal------> Login Page
-4. Navtej Anand------> Cart Page
+
+
+# Objective
+The main objective of our project was to make practical use of all the coding skills that we learnt in Masai School to build the Project.
+
+# Group-Project
+This is a collaborative project bult by team of four members in a span of six days.My team members are Animesh,Ajay and Navjet
