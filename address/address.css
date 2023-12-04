@@ -7,7 +7,7 @@ body {
     /* background-color: #f4f4f4; */
     text-align: center;
     background: rgb(255, 235, 238);
-    background-image: url(https://i.pinimg.com/originals/48/d5/48/48d548367e41ba2bb565191e32822bba.png);
+    background-image: url(../home_image/background_image.jpg);
 
     background-size: cover;
     opacity: 1;

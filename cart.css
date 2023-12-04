@@ -10,28 +10,6 @@ a {
 a > h2 {
     color: #03a685;
 }
-/* 
-#headerMain {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-#header {
-    display: flex;
-    width: 92%;
-    color: rgb(105, 107, 121);
-    font-size: 10px;
-    margin: 20px 10px;
-    justify-content: space-between;
-    
-}
-
-.navbarMiddle {
-
-    letter-spacing: 3px;
-    font-weight: bolder;
-} */
-
 
 
 #payment {
@@ -69,34 +47,6 @@ a > h2 {
 
 }
 
-/* #addstrip {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    border-radius: 4px;
-    border: 1px solid #eaeaec;
-
-}
-
-#addstrip > div {
-    font-size: 14px;
-    font-weight: 500;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#addstrip > button {
-    /* padding: 8px 16px; */
-    /* font-size: 12px;
-    font-weight: 600;
-    border-radius: 2px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(255, 63, 108);
-    border-color: rgb(255, 63, 108);
-    border-width: 1px;
-    border-style: solid;
-    cursor: pointer;
-}  */
 
 #offer {
     display: block;
@@ -233,12 +183,12 @@ a > h2 {
 #rightBlock {
     vertical-align: top;
     padding: 20px;
-    /* border: 1px solid red; */
+
 }
 
 #coupons {
     display: block;
-    /* border: 1px solid red;           */
+
 }
 
 #coupons > div > p {
@@ -247,19 +197,15 @@ a > h2 {
     font-size: 14px;
     line-height: 16px;
     
-    /* padding: 7px 0; */
 }
 
 #coupons > div > button {
     display: inline-block;
     font-size: 12px;
     padding: 4px 16px;
-    /* margin: auto; */
     font-weight: 600;
     border-radius: 2px;
     background-color: rgb(255, 255, 255);
-    /* color: rgb(255, 63, 108); */
-    /* border-color: rgb(255, 63, 108); */
     border-width: 1px;
     border-style: solid;
     cursor: pointer;
@@ -268,7 +214,6 @@ a > h2 {
 
 #priceContainer {
     margin-bottom: 16px;
-    /* border: 1px solid red; */
 
 }
 

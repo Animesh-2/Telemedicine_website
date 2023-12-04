@@ -25,7 +25,7 @@ function navbar() {
             <li> <i class="fa-solid fa-cart-shopping"></i> </li>
         </a>
         
-        <a href="">
+        <a href="login.html">
 
             <li>  Consult Now </li>
         </a>
