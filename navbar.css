@@ -78,6 +78,9 @@ a {
     .navbar-left>a:nth-child(even) {
         display: none !important;
     }
+    .navbar-left>a:nth-child(2){
+        display: contents !important;
+    }
 
     .navbar-left {
         width: 50%;
@@ -102,7 +105,7 @@ a {
     .navbar-left>a:not(:first-child) {
         display: none !important;
     }
-
+    
     .navbar-left {
         width: 30%;
         gap: 0px;

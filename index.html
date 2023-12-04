@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
     <link href=" https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css " rel="stylesheet">
+    <script src="https://unpkg.com/@splidejs/splide-extension-grid@1.0.0/dist/js/splide-extension-grid.min.js"></script>
 
     <script src="https://kit.fontawesome.com/8f738ffcbd.js" crossorigin="anonymous"></script>
 </head>
@@ -236,7 +237,7 @@
 </body>
 
 </html>
-<!-- -----------------------------------NAVBAR SCRIPT START--------------------------------->
+<!-- -----------------------------NAVBAR & FOOTER SCRIPT START--------------------------------->
 <script type="module" src="navbar.js"></script>
 <script type="module" src="footer.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -261,17 +262,20 @@
     footer_container.innerHTML = (footerHTML);
 
 </script>
-<!-- ------------------------------------NAVBAR SCRIPT END---------------------------------- -->
+<!-- ---------------------------NAVBAR & FOOTER SCRIPT END---------------------------------- -->
 
 <!-- ------------------------------DOCUMENT REGISTER BUTTON START-------------------------- -->
-<script>
 
+<script>
+    
     let register_btn = document.getElementById("home-register");
     register_btn.addEventListener("click", function () {
-
+        
         window.location.href = "#";
     })
+</script>
 
+<script>
     document.addEventListener('DOMContentLoaded', function () {
         var splide = new Splide('.splide', {
             gap: '2em',
@@ -298,5 +302,6 @@
             },
         });
         splide.mount();
+
     });
 </script>
