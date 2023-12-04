@@ -57,7 +57,8 @@ The Project is deployed on netlifty
 ![image](https://github.com/Animesh-2/Telemedicine-website/assets/51116785/bf14e2bf-8b59-40f3-923e-aa5436c6eb00)
 
 **Cart Page**
-![image](https://github.com/Animesh-2/Telemedicine-website/assets/51116785/bf14e2bf-8b59-40f3-923e-aa5436c6eb00)
+![image](https://github.com/Animesh-2/Telemedicine-website/assets/51116785/7ce2df22-4b4c-4796-b681-4a732a2e621f)
+
 
 **Address Page**
 ![image](https://github.com/Animesh-2/Telemedicine-website/assets/51116785/65b3aec4-6f4e-4c45-a105-817482ff7f91)
