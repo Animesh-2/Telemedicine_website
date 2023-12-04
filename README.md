@@ -31,8 +31,11 @@ The Project is deployed on netlifty
 
 # Team Members-
 Animesh Singh
+
 Navjet Anand
+
 Ajay Jaiswal
+
 Abhay Khare
 
 
