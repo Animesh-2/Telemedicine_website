@@ -21,7 +21,7 @@ function navbar() {
     </ul>
 
     <ul class="navbar-right">
-        <a href="">
+        <a href="cart.html">
             <li> <i class="fa-solid fa-cart-shopping"></i> </li>
         </a>
         
