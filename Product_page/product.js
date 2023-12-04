@@ -53,16 +53,20 @@ soap.addEventListener("click",()=>{
 
 
 sortAtoZBtn.addEventListener("click",()=>{
-  fetchData(`${urlProduct}`,`_sort=priceCTC&_order=asc`);
+  fetchData(`${urlProduct}`,`_sort=price&_order=asc`);
   })
   sortZtoABtn.addEventListener("click",()=>{
-    fetchData(`${urlProduct}`,`_sort=priceCTC&_order=desc`);
+    fetchData(`${urlProduct}`,`_sort=price&_order=desc`);
   })
 
+  
+  
 async function fetchData(url,queryParamString=""){
     try{
     //  console.log(url+"&"+quaryParams);
+    // loadingFun=true;
     
+    // isLoading
      let res = await fetch (`${url}?_page=1&_limit=6&${queryParamString}`)
     //  let res = await fetch(url+"&"+quaryParams)
     let total =(res.headers.get("X-Total-Count"))
@@ -71,6 +75,7 @@ async function fetchData(url,queryParamString=""){
   let totalpage=Math.ceil(total/limit);
   console.log(totalpage)
   let data = await res.json();
+  loadingFun=false
   displayData(data);
   console.log(data)
     //   pagination(res.headers.get("X-Total-count"),5,quaryParams);
@@ -126,11 +131,19 @@ async function fetchData(url,queryParamString=""){
   
    function displayData(data){
    mainSection.innerHTML="";
+    
+  //  <div class="loading-container">
+  //  <div class="loading-spinner"></div>
+  //  <p>Loading...</p>
+//  </div>
+ 
    let outer = document.createElement("div");
    outer.setAttribute("class","card-list");
   
   data.map((item)=>{
   
+   
+
     let card = document.createElement("div");
     card.setAttribute("class","card");
     
@@ -181,7 +194,7 @@ async function fetchData(url,queryParamString=""){
 function details(ele)
 {
     localStorage.setItem("details",JSON.stringify(ele))
-    window.location.assign("../product_details/details.html")
+    window.location.assign("./product_details/details.html")
 }
 
    var items = JSON.parse(localStorage.getItem('cartData')) || []
