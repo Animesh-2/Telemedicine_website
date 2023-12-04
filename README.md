@@ -30,6 +30,7 @@ API
 ## Deployment 🎥
 
 The Project is deployed on netlifty 
+- Deployed Link:- [Enjoy the Experience](https://kaleidoscopic-cascaron-782204.netlify.app/)
 
 ## Snap Shots 📷
 
