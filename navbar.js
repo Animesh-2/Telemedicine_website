@@ -6,7 +6,7 @@ function navbar() {
         <a href="index.html">
                 <img src="home_image/Blue, white and green Medical care logo (2).png">
         </a>
-        <a href="">
+        <a href="./Product_page/product.html">
             <li> Medicines </li>
         </a>
         <a href="">
