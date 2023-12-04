@@ -10,10 +10,10 @@ The main objective of our project was to make practical use of all the coding sk
 This is a collaborative project built by a team of four members in a span of six days.
 
 ## Tech Stack 💻
-HTML5 |
- CSS3
-| JAVASCRIPT |
-JSON-SERVER |
+HTML5
+CSS3
+JAVASCRIPT 
+JSON-SERVER 
 API
 
 **Splide library's CSS file (splide-default.min.css) has been used**
