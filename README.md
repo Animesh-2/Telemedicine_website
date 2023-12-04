@@ -1,6 +1,8 @@
 ## Telemedicine-website
 "Introducing our Telemedicine-website, a one-stop digital destination for all your healthcare needs. Explore a comprehensive range of pharmaceuticals, wellness products, and medical supplies, delivered conveniently to your doorstep, ensuring easy access to essential healthcare solutions.
 
+![Logo](https://github.com/Animesh-2/Telemedicine-website/blob/main/home_image/Blue%2C%20white%20and%20green%20Medical%20care%20logo%20(2).png)
+
 ## Objective
 The main objective of our project was to make practical use of all the coding skills that we learned in Masai School to build the Project.
 
