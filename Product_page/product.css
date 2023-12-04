@@ -6,10 +6,10 @@
  }
  
  
- /* #small{
+ #small{
      color: rgb(35, 82, 89);
      margin-block-end: -0.16em;
- } */
+ }
  #large{
      font-size: 5rem;
      margin-block-start: -0.16em;
