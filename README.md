@@ -67,8 +67,8 @@ The Project is deployed on netlifty
 
 - 👤 [Animesh Singh](https://www.github.com/Animesh-2)
 - 👤 [Abhay Khare](https://github.com/ABHAY-22)
-- 👤 [Animesh Singh](https://github.com/navtejnt1)
-- 👤 [Animesh Singh](https://github.com/AjayJaishwal)
+- 👤 [Navtej Anand](https://github.com/navtejnt1)
+- 👤 [Ajay Jaiswal](https://github.com/AjayJaishwal)
 
 
 # Conclusion
