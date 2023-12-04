@@ -21,3 +21,20 @@ JAVASCRIPT
 JSON-SERVER
 
 API
+
+# Deployment
+
+The Project is deployed on netlifty 
+
+# Snapshots of Pages
+
+
+# Team Members-
+Animesh Singh
+Navjet Anand
+Ajay Jaiswal
+Abhay Khare
+
+
+# Conclusion
+The rapid creation of this website in a mere five days by a dedicated team of four members underscores their exceptional teamwork and project management skills. It exemplifies their ability to execute tasks efficiently and deliver high-quality results within tight deadlines.
