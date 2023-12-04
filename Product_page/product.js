@@ -63,26 +63,19 @@ sortAtoZBtn.addEventListener("click",()=>{
   
 async function fetchData(url,queryParamString=""){
     try{
-    //  console.log(url+"&"+quaryParams);
-    // loadingFun=true;
+   
+    let res = await fetch (`${url}?_page=1&_limit=6&${queryParamString}`)
     
-    // isLoading
-     let res = await fetch (`${url}?_page=1&_limit=6&${queryParamString}`)
-    //  let res = await fetch(url+"&"+quaryParams)
     let total =(res.headers.get("X-Total-Count"))
   console.log(total)
   let limit =6;
   let totalpage=Math.ceil(total/limit);
   console.log(totalpage)
   let data = await res.json();
-  loadingFun=false
+  
   displayData(data);
   console.log(data)
-    //   pagination(res.headers.get("X-Total-count"),5,quaryParams);
-    //  console.log("Total items:-" + res.headers.get("X-Total-count"));
-    //  let data = await res.json();
-    //  console.log(data);
-    //  displayData(data);
+    
 
     paginationWrapper.innerText="";
   
@@ -97,23 +90,7 @@ async function fetchData(url,queryParamString=""){
   
   fetchData(`${urlProduct}`);
   
-  // function pagination(total,limit,quaryParams){
-  //    let totalpage = Math.ceil(total/limit);
-  //     paginationWrapper.innerHTML="";
   
-  //    for(let i=1;i<=totalpage;i++){
-  //      let btn = document.createElement("button");
-  //      btn.className = "pagination-button";
-  //   //    btn.dataset.id = i;
-  //      btn.innerHTML = i;
-  //      btn.addEventListener("click",()=>{
-  //        fetchData(`${urlProduct}?_page=${i}&_limit=6`,quaryParams)
-  //           paginationWrapper.append(btn);
-  //      })
-  //      paginationWrapper.append(btn);
-  //    }
-  
-  //  }
   function pagination(totalpage,queryParamString){
     for(let i =1;i<=totalpage;i++){
       let btn =document.createElement("button");
@@ -132,10 +109,7 @@ async function fetchData(url,queryParamString=""){
    function displayData(data){
    mainSection.innerHTML="";
     
-  //  <div class="loading-container">
-  //  <div class="loading-spinner"></div>
-  //  <p>Loading...</p>
-//  </div>
+ 
  
    let outer = document.createElement("div");
    outer.setAttribute("class","card-list");
