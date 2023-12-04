@@ -10,13 +10,13 @@
      color: rgb(35, 82, 89);
      margin-block-end: -0.16em;
  }
- #large{
+ /* #large{
      font-size: 5rem;
      margin-block-start: -0.16em;
  }
- 
+  */
  .container{
-     min-height: 90vh;;
+     min-height: 90vh;
      width: 100%;
      display: flex;
      margin-top: 20px;
